@@ -15,3 +15,7 @@
 
 # goland
 .idea
+
+# custom
+*/data
+data/

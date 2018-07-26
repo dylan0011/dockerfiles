@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  # Define a Telegraf service
+  consul:
+    image: consul
+    ports:
+      - "8500:8500"
+    volumes:
+      - ./data:/consul/data:rw
