@@ -2,9 +2,21 @@ version: '3'
 
 services:
   # Define a Telegraf service
-  consul:
+  consul_1:
     image: consul
+    # command: consul agent -config-file=/consul/config/config-file.json -server
+    container_name: consul_1
     ports:
       - "8500:8500"
     volumes:
       - ./data:/consul/data:rw
+      - ./config:/consul/config:rw
+
+  # consul_2:
+  #   image: consul
+  #   command: consul agent -dev -join=cmain
+  #   container_name: consul_2
+  #   links:
+  #     - consul_1:cmain
+  #
+

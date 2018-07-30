@@ -1,0 +1,4 @@
+{
+  "datacenter": "microservices",
+  "data_dir": "/tmp/consul"
+}
